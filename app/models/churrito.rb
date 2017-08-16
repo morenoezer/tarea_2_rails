@@ -1,0 +1,2 @@
+class Churrito < ApplicationRecord
+end

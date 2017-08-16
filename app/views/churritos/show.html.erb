@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @churrito.nombre %>
+</p>
+
+<p>
+  <strong>Sabor:</strong>
+  <%= @churrito.sabor %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @churrito.precio %>
+</p>
+
+<%= link_to 'Edit', edit_churrito_path(@churrito) %> |
+<%= link_to 'Back', churritos_path %>

@@ -1,0 +1,32 @@
+<%= form_with(model: churrito, local: true) do |form| %>
+  <% if churrito.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(churrito.errors.count, "error") %> prohibited this churrito from being saved:</h2>
+
+      <ul>
+      <% churrito.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :churrito_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sabor %>
+    <%= form.text_area :sabor, id: :churrito_sabor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precio %>
+    <%= form.number_field :precio, id: :churrito_precio %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
