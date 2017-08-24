@@ -1,0 +1,2 @@
+module GokusHelper
+end

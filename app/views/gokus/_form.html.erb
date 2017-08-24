@@ -1,0 +1,27 @@
+<%= form_with(model: goku, local: true) do |form| %>
+  <% if goku.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(goku.errors.count, "error") %> prohibited this goku from being saved:</h2>
+
+      <ul>
+      <% goku.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :goku_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :goku_body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @goku.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @goku.body %>
+</p>
+
+<%= link_to 'Edit', edit_goku_path(@goku) %> |
+<%= link_to 'Back', gokus_path %>

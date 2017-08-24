@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gokus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gokus.each do |goku| %>
+      <tr>
+        <td><%= goku.title %></td>
+        <td><%= goku.body %></td>
+        <td><%= link_to 'Show', goku %></td>
+        <td><%= link_to 'Edit', edit_goku_path(goku) %></td>
+        <td><%= link_to 'Destroy', goku, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Goku', new_goku_path %>
